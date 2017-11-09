@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/zhaozk/Code/ceshi.com'
+let g:netrw_dirhist_2='/Users/zhaozk/Code/v4.itjuzi.com'
+let g:netrw_dirhist_3='/Users/zhaozk/Desktop/python/__pycache__'
+let g:netrw_dirhist_4='/Users/zhaozk/Code/wenda'
