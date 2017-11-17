@@ -23,8 +23,6 @@ set bg=dark
 "set cursorline
 "总是显示状态行  
 set laststatus=2
-"取消光标闪烁  
-set novisualbell
 "状态栏显示当前执行的命令  
 set showcmd 
 "标尺功能，显示当前光标所在行列号  
@@ -57,7 +55,6 @@ filetype plugin indent on
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -74,11 +71,24 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "更改nerdtree的默认箭头
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
-" 显示书签列表
+" 显示nerdtree书签列表
 let NERDTreeShowBookmarks=1
-" 设置宽度
+" 设置nerdtree宽度
 let NERDTreeWinSize=23
-" 忽略一下文件的显示
+"设置显示隐藏文件
+let NERDTreeShowHidden=1
+"忽略特定的文件和目录
 let NERDTreeIgnore=['\.pyc','\~$','\.swp']
+"控制当光标移动超过一定距离时，是否自动将焦点调整到屏中心
+let NERDTreeAutoCenter=1
+"对文件进行排序
 
+"python补全
+let g:pydiction_location = '~/.vim/after/complete-dict'
+let g:pydiction_menu_height = 20
+let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
 
